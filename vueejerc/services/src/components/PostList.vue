@@ -54,4 +54,16 @@
 </script>
 
 <style scoped>
+    .post-list {
+        width: 96vw;
+        height: 75px;
+        padding: 25px;
+        list-style-type: none ;
+    }
+
+    .post-list li {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+    }
 </style>
