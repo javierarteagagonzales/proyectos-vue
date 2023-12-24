@@ -5,8 +5,8 @@
 </ul>
 </template>
 
-<script lang="ts">
-//composition API
+<script lang="ts" setup>
+    /* *******composition API javascript
     import { defineComponent, onMounted } from 'vue';
     import PostService from '@/services/PostService'
 
@@ -21,7 +21,36 @@
             })
             return{posts}
         }
+    })  */
+
+    /* Option API javascript
+    import { defineComponent, onMounted } from 'vue';
+    import PostService from '@/services/PostService'
+
+    export default defineComponent({
+        name: 'PostList',
+        data() {
+            const service = new PostService()
+            const posts = service.getPosts()
+            return {posts, service}
+        },
+        async mounted (){
+            await this.service.fetchAll()
+        }
     })
+    */
+
+    // Composition setup javascript
+    import { defineComponent, onMounted } from 'vue';
+    import PostService from '@/services/PostService'
+
+    const service = new PostService()
+    const posts = service.getPosts()
+
+    onMounted(async () => {
+        await service.fetchAll()
+    })
+
 </script>
 
 <style scoped>
