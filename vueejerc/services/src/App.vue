@@ -3,6 +3,7 @@
 </template>
 
 <script lang="ts" setup>
+//script
 import PostList from './components/PostList.vue'
 </script>
 
