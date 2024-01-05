@@ -53,7 +53,8 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+$red: #ff0000;
     .post-list {
         width: 96vw;
         height: 75px;
@@ -65,5 +66,6 @@
         padding: 10px;
         width: 100%;
         border: 1px solid #ccc;
+        color: $red;
     }
 </style>
